@@ -2,23 +2,25 @@ import React from "react";
 import s from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import facebook from "../../assets/facebook.png";
-import inst from "../../assets/pngwing.com.png";
-import user from '../../assets/user.png'
+import facebook from "../../public/facebook.png";
+import inst from "../../public/pngwing.com.png";
+import user from "../../public/user.png";
+import logo from "../../public/logo.png";
 Link;
 const Header = () => {
   return (
     <header className={s.Header}>
       <div className={s.header_upper}>
         <div className={s.logo}>
+          <Image src={logo}></Image>
           <h1>БишкекСууКанал</h1>
         </div>
         <div className={s.language}>
-          <button>KG</button>
-          <button>RUS</button>
+          <button className={s.button_kg}>KG</button>
+          <button className={s.button_rus}>RUS</button>
         </div>
         <div className={s.sign_up}>
-          <Image className={s.user} src={user}/>
+          <Image className={s.user} src={user} />
           <Link href="/">личный кабинет</Link>
         </div>
         <div className={s.info}>
@@ -49,10 +51,23 @@ const Header = () => {
           <Link href="">Площадка</Link>
         </div>
         <div className={s.header_link_right}>
-          <Image className={s.facebook} src={facebook}/>
-          <Image src={inst}/>
-          <a href="https://bishkek.gov.kg/ru">Сайт мэрии</a>
+          <a
+            className={s.facebook}
+            target="_blank"
+            href="https://www.facebook.com/vodokanal312/?lan=ru"
+          >
+            <Image className={s.facebook} src={facebook} />
+          </a>
+          <a
+            href="https://www.instagram.com/vodokanal312/?igshid=4u6zjs7i4u3y&lan=ru"
+            target="_blank"
+          >
+            <Image className={s.inst} src={inst} />
+          </a>
         </div>
+        <a className={s.siteMerii} href="https://bishkek.gov.kg/ru">
+          Сайт мэрии
+        </a>
       </div>
     </header>
   );

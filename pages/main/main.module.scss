@@ -1,9 +1,21 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
+.main{
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
     background-color: white;
-}
+    .desc{
+        width: 100vw;
+        height: 60vh;
+        // padding: 5% 20% 5% 20%;
+        background-color: blueviolet;
+        }
+    }
+    .cards{
+        width: 100%;
+        height: 40vh;
+        padding: 5% 20% 5% 20%;
+        .card{
+            width: 20vw;
+            height: 20vh;
+        }
+    }
