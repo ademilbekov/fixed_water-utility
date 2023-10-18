@@ -182,24 +182,21 @@
   align-items: center;
   height: 15px;
   .header_link_left {
-    width: auto;
+    width: 30%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border-right: 1px solid black;
+    justify-content: space-between;
     align-items: center;
-    gap: 2vw;
-    padding-right: 25px;
+
   }
   .header_link_middle {
-    width: auto;
+    width: 30%;
     display: flex;
     flex-direction: row;
-    gap: 1.8vw;
-    border-right: 1px solid black;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding-right: 24px;
+  
     a {
       color: rgb(102, 136, 172);
       position: relative;
@@ -226,13 +223,11 @@
     }
   }
   .header_link_right {
-    width: auto;
+    width: 15%;
     display: flex;
     flex-direction: row;
-    gap: 3vw;
-    padding-right: 50px;
+    justify-content: space-around;
     align-items: center;
-    border-right: 1px solid black;
 
     img {
       height: 30px;

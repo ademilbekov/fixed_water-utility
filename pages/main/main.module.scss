@@ -4,11 +4,13 @@
     height: 100vh;
     background-color: white;
     .desc{
-        width: 100vw;
-        height: 60vh;
-        // padding: 5% 20% 5% 20%;
-        background-color: blueviolet;
+        
         }
+    .video{
+        width: 100% !important;
+        height: 60vh;
+        object-fit: cover;
+    }
     }
     .cards{
         width: 100%;
