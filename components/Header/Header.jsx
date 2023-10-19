@@ -12,7 +12,7 @@ const Header = () => {
     <header className={s.Header}>
       <div className={s.header_upper}>
         <div className={s.logo}>
-          <Image src={logo}></Image>
+          <Image src={logo} alt="logo"></Image>
           <h1>БишкекСууКанал</h1>
         </div>
         <div className={s.language}>
@@ -20,8 +20,8 @@ const Header = () => {
           <button className={s.button_rus}>RUS</button>
         </div>
         <div className={s.sign_up}>
-          <Image className={s.user} src={user} />
-          <Link href="/">личный кабинет</Link>
+          <Image className={s.user} src={user} alt="user"/>
+          <Link href="/login">личный кабинет</Link>
         </div>
         <div className={s.info}>
           <div className={s.number}>
@@ -56,13 +56,13 @@ const Header = () => {
             target="_blank"
             href="https://www.facebook.com/vodokanal312/?lan=ru"
           >
-            <Image className={s.facebook} src={facebook} />
+            <Image className={s.facebook} src={facebook} alt="facebook" />
           </a>
           <a
             href="https://www.instagram.com/vodokanal312/?igshid=4u6zjs7i4u3y&lan=ru"
             target="_blank"
           >
-            <Image className={s.inst} src={inst} />
+            <Image className={s.inst} src={inst} alt="inst" />
           </a>
         </div>
         <a className={s.siteMerii} href="https://bishkek.gov.kg/ru">

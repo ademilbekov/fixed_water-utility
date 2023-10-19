@@ -1,56 +1,101 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import s from "./main.module.scss";
 import Image from "next/image";
 import AnimCard from "@/components/UI/animCard/animCard";
-import Swipert from "../../components/UI/swiper/swipert";
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import './main.css';
+import Intro from "@/components/Intro/Intro";
+import NewsCard from "@/components/UI/NewsCard/NewsCard";
 const Home = () => {
-  const videoRef = useRef();
+  const newsArray = [
+    {
+      id: 1,
+      name: "Новость 1",
+      date: "18.10.2023",
+      image: "./traktor.jpg",
+      info: "Ремонтные работы с 25 октября, с 10:00 до 23:00",
+    },
+    {
+      id: 2,
+      name: "Новость 2",
+      date: "19.10.2023",
+      image: "./traktor.jpg",
+      info: "Новый сервис для пользователей с 1 ноября",
+    },
+    {
+      id: 3,
+      name: "Новость 3",
+      date: "20.10.2023",
+      image: "./traktor.jpg",
+      info: "Изменения в графике работы с 1 ноября",
+    },
+    {
+      id: 4,
+      name: "Новость 4",
+      date: "21.10.2023",
+      image: "./traktor.jpg",
+      info: "Праздничное мероприятие 5 ноября в 18:00",
+    },
+    {
+      id: 5,
+      name: "Новость 5",
+      date: "22.10.2023",
+      image: "./traktor.jpg",
+      info: "Новые книги в библиотеке, приходите за чтением",
+    },
+    {
+      id: 6,
+      name: "Новость 6",
+      date: "23.10.2023",
+      image: "./traktor.jpg",
+      info: "Закрытие выставки искусств 10 ноября в 20:00",
+    },
+    {
+      id: 7,
+      name: "Новость 7",
+      date: "24.10.2023",
+      image: "./traktor.jpg",
+      info: "Бесплатные мастер-классы для всех желающих 15 ноября",
+    },
+  ];
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-      videoRef.current.autoplay = true;
-    }, 3600);
-  }, []);
-
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => {
-    setOffsetY(window.pageYOffset);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const lastThreeNews = newsArray.slice(-3).reverse();
 
   return (
-    <main className={s.main}>
-      <div className={s.desc}>
-        <video
-        className={s.video}
-          ref={videoRef}
-          controls={false}
-          muted
-          loop
-          autoPlay={true}
-          // style={{ width: "100%", height:"100px"}}
-        >
-          <source src="/bishkek.mp4" />
-        </video>
+    <main className={s.home}>
+      <div className={s.video}>
+        <Intro />
       </div>
       <div className={s.cards}>
         <div className={s.card}>
           <AnimCard />
         </div>
+        <div className={s.card}>
+          <AnimCard />
+        </div>
+        <div className={s.card}>
+          <AnimCard />
+        </div>
+        <div className={s.card}>
+          <AnimCard />
+        </div>
+      </div>
+      <section className={s.news}>
+        <h1>Новости компании</h1>
+        {lastThreeNews.map((newsItem) => (
+          <div key={newsItem.id} className={s.newsCard}>
+            <NewsCard
+            info={newsItem.info}
+            date={newsItem.date}
+            />
+          </div>
+        ))}
+      </section>
+      <div className={s.button_focus_fixed}>
+        <button className={s.button_focus}>
+          <a href="https://wa.me/+996776111444?text=Здравствуйте,%20можно%20подробнее%20о%20жк%20Brooklyn">
+            Связаться с нами
+          </a>
+        </button>
       </div>
     </main>
   );
