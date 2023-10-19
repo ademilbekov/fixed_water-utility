@@ -6,7 +6,7 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
-  .video{
+  .video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -15,13 +15,68 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -1g0%;
     right: 0;
     z-index: 1;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    .arrow_button {
+      border: none;
+      margin-top: 2vh;
+      display: flex;
+      color: white;
+      background-color: rgb(102, 136, 172);
+      padding: 10px 16px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      border-radius: 16px;
+      cursor: pointer;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .arrow_button > .arrow {
+      width: 6px;
+      height: 6px;
+      border-right: 2px solid rgb(255, 255, 255);
+      border-bottom: 2px solid rgb(255, 255, 255);
+      position: relative;
+      transform: rotate(-45deg);
+      margin: 0 6px;
+      transition: all 0.3s ease;
+    }
+
+    .arrow_button > .arrow::before {
+      display: block;
+
+      width: 3px;
+      transform-origin: bottom right;
+      height: 2px;
+      position: absolute;
+      opacity: 0;
+      bottom: calc(-2px / 2);
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+      content: "";
+      right: 0;
+    }
+
+    .arrow_button:hover > .arrow {
+      transform: rotate(-45deg) translate(4px, 4px);
+      border-color: text-hover-color;
+    }
+
+    .arrow_button:hover > .arrow::before {
+      opacity: 1;
+      width: 8px;
+    }
+
+    .arrow_button:hover {
+      background-color: none;
+      color: white;
+    }
     .hr_home {
       overflow: hidden;
     }
@@ -39,7 +94,6 @@
       }
     }
     .intro_last_title {
-    
     }
     h1 {
       font-family: "Bahnschrift", sans-serif;
@@ -88,90 +142,121 @@
     }
   }
 
-
-@media screen and (min-width: 901px) and (max-width: 1050px) {
-  .home {
-    height: auto;
-  }
-
-  .home_bc {
-    padding: 100px 20px 0 20px !important;
-    .text_home {
-      margin-top: 0 !important;
-    }
-  }
-}
-
-@media screen and (min-width: 1051px) and (max-width: 1440px) {
-  .home {
-    height: auto;
-  }
-  .home_bc {
-    padding: 180px 20px 0 20px !important;
-    h2 {
-      font-size: 52px !important;
-    }
-    h1 {
-      font-size: 100px !important;
+  @media screen and (min-width: 901px) and (max-width: 1050px) {
+    .home {
+      height: auto;
     }
 
-    .text_home {
-      margin-top: 0 !important;
-    }
-  }
-}
-
-@media screen and (min-width: 704px) and (max-width: 900px) {
-  .home {
-    height: auto;
-  }
-  .home_bc {
-    padding: 110px 20px 0 20px !important;
-    h2 {
-      font-size: 62.5px !important;
-      line-height: 80px !important;
-    }
-    h1 {
-      font-size: 100px !important;
-      line-height: 80px !important;
-    }
-    .text_home {
-      margin-top: 0 !important;
-    }
-  }
-}
-
-@media screen and (max-width: 703px) {
-  .home {
-    height: auto;
-  }
-  .home_bc {
-    padding: 90px 20px 0 20px !important;
-    .intro_last_title {
-      margin-top: 0 !important;
-    }
-    hr {
-      margin-bottom: 0 !important;
-      margin-left: 0 !important;
-    }
-    h2 {
-      font-size: 62.5px !important;
-      line-height: 65px !important;
-    }
-    h1 {
-      font-size: 100px !important;
-      line-height: 65px !important;
-      padding-top: 20px;
-    }
-    .text_home {
-      margin-top: 0;
-    }
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 639px) {
-  .home {
     .home_bc {
+      padding: 100px 20px 0 20px !important;
+      .text_home {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1051px) and (max-width: 1440px) {
+    .home {
+      height: auto;
+    }
+    .home_bc {
+      padding: 180px 20px 0 20px !important;
+      h2 {
+        font-size: 52px !important;
+      }
+      h1 {
+        font-size: 100px !important;
+      }
+
+      .text_home {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 704px) and (max-width: 900px) {
+    .home {
+      height: auto;
+    }
+    .home_bc {
+      padding: 110px 20px 0 20px !important;
+      h2 {
+        font-size: 62.5px !important;
+        line-height: 80px !important;
+      }
+      h1 {
+        font-size: 100px !important;
+        line-height: 80px !important;
+      }
+      .text_home {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 703px) {
+    .home {
+      height: auto;
+    }
+    .home_bc {
+      padding: 90px 20px 0 20px !important;
+      .intro_last_title {
+        margin-top: 0 !important;
+      }
+      hr {
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+      }
+      h2 {
+        font-size: 62.5px !important;
+        line-height: 65px !important;
+      }
+      h1 {
+        font-size: 100px !important;
+        line-height: 65px !important;
+        padding-top: 20px;
+      }
+      .text_home {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 639px) {
+    .home {
+      .home_bc {
+        h2 {
+          font-size: 37.25px !important;
+          line-height: 40px !important;
+        }
+        h1 {
+          font-size: 60px !important;
+          line-height: 40px !important;
+          padding-top: 40px;
+        }
+        .text_home {
+          p {
+            font-size: 15px !important;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+    .intro_title {
+      height: 30px !important;
+    }
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 600px) {
+    .text_home {
+      display: none;
+    }
+    .intro_title {
+      height: 30px !important;
+    }
+    .home_bc {
+      padding: 90px 20px 0 20px !important;
+
       h2 {
         font-size: 37.25px !important;
         line-height: 40px !important;
@@ -181,134 +266,100 @@
         line-height: 40px !important;
         padding-top: 40px;
       }
-      .text_home {
-        p {
-          font-size: 15px !important;
-          line-height: 15px;
-        }
+    }
+  }
+
+  // @media screen and (max-width: 478px) {
+  //   .home {
+  //     height: auto;
+  //   }
+  //   .intro_title{
+  //     h2 {
+  //       font-size: 20px !important;
+  //       line-height: 40px !important;
+  //     }
+  //   }
+
+  //   .home_bc {
+  //     padding: 70px 20px 0 20px !important;
+
+  //     h2 {
+  //       font-size: 20px !important;
+  //       line-height: 40px !important;
+  //     }
+  //     .text_home {
+  //       display: none;
+  //     }
+  //   }
+  //   .button_focus_fixed {
+  //     bottom: 30px;
+  //     left: 18%;
+  //   }
+  // }
+
+  @media screen and (min-width: 360px) and (max-width: 460px) {
+    .button_focus_fixed {
+      right: 10px !important;
+    }
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 460px) {
+    .intro_title {
+      height: 50px !important;
+      h2 {
+        font-size: 35px !important;
+      }
+      h1 {
+        font-size: 35px !important;
       }
     }
   }
-  .intro_title {
-    height: 30px !important;
-  }
-}
-
-@media screen and (min-width: 461px) and (max-width: 600px) {
-  .text_home {
-    display: none;
-  }
-  .intro_title {
-    height: 30px !important;
-  }
-  .home_bc {
-    padding: 90px 20px 0 20px !important;
-
-    h2 {
-      font-size: 37.25px !important;
-      line-height: 40px !important;
+  @media screen and (min-width: 360px) and (max-width: 460px) {
+    .home {
+      height: auto;
     }
-    h1 {
-      font-size: 60px !important;
-      line-height: 40px !important;
-      padding-top: 40px;
+    .intro_title {
+      height: 50px !important;
     }
-  }
 
-}
-
-// @media screen and (max-width: 478px) {
-//   .home {
-//     height: auto;
-//   }
-//   .intro_title{
-//     h2 {
-//       font-size: 20px !important;
-//       line-height: 40px !important;
-//     }
-//   }
-
-//   .home_bc {
-//     padding: 70px 20px 0 20px !important;
-
-//     h2 {
-//       font-size: 20px !important;
-//       line-height: 40px !important;
-//     }
-//     .text_home {
-//       display: none;
-//     }
-//   }
-//   .button_focus_fixed {
-//     bottom: 30px;
-//     left: 18%;
-//   }
-// }
-
-
-@media screen and (min-width: 360px) and (max-width: 460px) {
-  .button_focus_fixed {
-    right: 10px !important;
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 460px) {
-  .intro_title {
-    height: 50px !important;
-    h2 {
-      font-size: 35px !important;
+    .text_home {
+      display: none;
     }
-    h1 {
-      font-size: 35px !important;
-    }
-  }
-}
-@media screen and (min-width: 360px) and (max-width: 460px) {
-  .home {
-    height: auto;
-  }
-  .intro_title {
-    height: 50px !important;
-  }
 
-  .text_home{
-    display: none;
-  }
+    .home_bc {
+      padding: 90px 20px 0 20px !important;
 
-  .home_bc {
-    padding: 90px 20px 0 20px !important;
-
-    h2 {
-      font-size: 25px !important;
-      line-height: 55px !important;
-    }
-    h1 {
-      font-size: 35px !important;
-      padding-top: 0 !important;
-      line-height: 40px !important;
-    }
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 360px) {
-  .home {
-    height: auto;
-  }
-  .intro_title {
-    height: 40px !important;
-    h2 {
-      font-size: 31.25px !important;
-      line-height: 40px !important;
+      h2 {
+        font-size: 25px !important;
+        line-height: 55px !important;
+      }
+      h1 {
+        font-size: 35px !important;
+        padding-top: 0 !important;
+        line-height: 40px !important;
+      }
     }
   }
 
-  .home_bc {
-    padding: 70px 20px 0 20px !important;
+  @media screen and (min-width: 0px) and (max-width: 360px) {
+    .home {
+      height: auto;
+    }
+    .intro_title {
+      height: 40px !important;
+      h2 {
+        font-size: 31.25px !important;
+        line-height: 40px !important;
+      }
+    }
 
-    h1 {
-      font-size: 40px !important;
-      line-height: 40px !important;
+    .home_bc {
+      padding: 70px 20px 0 20px !important;
+
+      h1 {
+        font-size: 40px !important;
+        line-height: 40px !important;
+      }
     }
   }
-}
 }

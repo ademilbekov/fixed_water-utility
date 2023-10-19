@@ -83,16 +83,16 @@ const Home = () => {
         <h1>Новости компании</h1>
         {lastThreeNews.map((newsItem) => (
           <div key={newsItem.id} className={s.newsCard}>
-            <NewsCard
-            info={newsItem.info}
-            date={newsItem.date}
-            />
+            <NewsCard info={newsItem.info} date={newsItem.date} />
           </div>
         ))}
+        <button className={s.arrow_button}>
+          Все новости<span className={s.arrow}></span>
+        </button>
       </section>
       <div className={s.button_focus_fixed}>
         <button className={s.button_focus}>
-          <a href="https://wa.me/+996776111444?text=Здравствуйте,%20можно%20подробнее%20о%20жк%20Brooklyn">
+          <a href="https://mail.google.com/mail/u/0/?pli=1#sent?compose=jrjtXPWVTLrksTQsZrSmvPJQvWRrPmmrCXhkJKnZphCkRrqNxgPDbdSHrmcpnmwHsQSpXlKm">
             Связаться с нами
           </a>
         </button>
