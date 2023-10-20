@@ -4,7 +4,7 @@ import AnimatedTextCharacterParagraph from "@/components/UI/animatedText/Animate
 import AnimatedLast from "@/components/UI/animatedText/AnimatedLast";
 import { useEffect, useRef, useState } from "react";
 import s from "./Intro.module.scss";
-
+import Link from "next/link";
 const Intro = () => {
   const videoRef = useRef();
 
@@ -60,9 +60,12 @@ const Intro = () => {
               text={"Забота о вас и вашей воде!"}
             />
           </div>
-          <button className={s.arrow_button}>
-            Все новости<span className={s.arrow}></span>
-          </button>
+
+          <Link href="/news">
+            <button className={s.arrow_button}>
+              О водоканале<span className={s.arrow}></span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

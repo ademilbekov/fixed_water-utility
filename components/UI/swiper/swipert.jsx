@@ -4,50 +4,50 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../../../app/swipert.css";
 import { Pagination } from "swiper/modules";
-import worker from "../../../public/worker.png";
-import Image from "next/image";
-import emply from "../../../public/33.jpg";
 import s from "./swiper.module.scss";
-export default function swipert() {
+import buttonPulse from "../btn/ButtonPulse";
+export default function Swipert() {
   return (
     <>
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="swipert"
-      >
+      <Swiper pagination={true} modules={[Pagination]} className="swipert">
         <SwiperSlide>
-          <div className={s.text}>
-            <h1>
-              Квалифицииорованные сотрудники, <br /> заботящиеся о вашем
-              здороьве
-              <br />и качестве воды!
-            </h1>
+          <div className={s.block}>
+            <img className={s.img} src="./cxema1.jpg" alt="img" />
+            <div className={s.text}>
+              <h1>Услуги</h1>
+              <div className={s.desc}>
+                <h1>Строительно-монтажные работы</h1>
+                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+              </div>
+              <div className={s.buttonPulse}>{buttonPulse()}</div>
+            </div>
           </div>
-          <Image className={s.img} src={worker} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={s.text}>
-            <h1>
-              Квалифицииорованные сотрудники, <br /> заботящиеся о вашем
-              здороьве
-              <br />и качестве воды!
-            </h1>
+          <div className={s.block}>
+            <img className={s.img} src="./cxema1.jpg" alt="img" />
+            <div className={s.text}>
+              <h1>Услуги</h1>
+              <div className={s.desc}>
+                <h1>Строительно-монтажные работы</h1>
+                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+              </div>
+              <div className={s.buttonPulse}>{buttonPulse()}</div>
+            </div>
           </div>
-          <Image className={s.img} src={emply} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={s.text}>
-            <h1>
-              Квалифицииорованные сотрудники, <br /> заботящиеся о вашем
-              здороьве
-              <br />и качестве воды!
-            </h1>
+          <div className={s.block}>
+            <img className={s.img} src="./cxema1.jpg" alt="img" />
+            <div className={s.text}>
+              <h1>Услуги</h1>
+              <div className={s.desc}>
+                <h1>Строительно-монтажные работы</h1>
+                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+              </div>
+              <div className={s.buttonPulse}>{buttonPulse()}</div>
+            </div>
           </div>
-          <Image className={s.img} src={worker} />
         </SwiperSlide>
       </Swiper>
     </>

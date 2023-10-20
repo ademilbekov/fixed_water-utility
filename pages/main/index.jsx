@@ -5,6 +5,7 @@ import Image from "next/image";
 import AnimCard from "@/components/UI/animCard/animCard";
 import Intro from "@/components/Intro/Intro";
 import NewsCard from "@/components/UI/NewsCard/NewsCard";
+import Swipert from "@/components/UI/swiper/swipert";
 const Home = () => {
   const newsArray = [
     {
@@ -96,6 +97,47 @@ const Home = () => {
             Связаться с нами
           </a>
         </button>
+      </div>
+      <div className={s.swiper_block}>
+        <div className={s.left_side}>
+          <Swipert />
+        </div>
+        <div className={s.right_side}>
+          <h3>Сообщите о нарушениях</h3>
+          <h1> по номеру 1533</h1>
+          <h5></h5>
+          <ul>
+            <h4>На условиях анонимности проинформируйте:</h4>
+            <li>о фактах коррупции и должностных злоупотреблениях</li>
+            <li>о нарушении правил безопасности и охраны труда</li>
+            <li>о других нарушениях и негативных событиях</li>
+          </ul>
+        </div>
+      </div>
+      <div className={s.cooperation}>
+        <h1>Мы сотрудничаем</h1>
+        <div className={s.links}>
+          <div className={s.link_box}>
+            <img src="./logo.png" alt="img" />
+            <p>Мэрия Бишкека</p>
+          </div>
+          <div className={s.link_box}>
+            <img src="./logo.png" alt="img" />
+            <p>Мэрия Бишкека</p>
+          </div>
+          <div className={s.link_box}>
+            <img src="./logo.png" alt="img" />
+            <p>Мэрия Бишкека</p>
+          </div>
+          <div className={s.link_box}>
+            <img src="./logo.png" alt="img" />
+            <p>Мэрия Бишкека</p>
+          </div>
+          <div className={s.link_box}>
+            <img src="./logo.png" alt="img" />
+            <p>Мэрия Бишкека</p>
+          </div>
+        </div>
       </div>
     </main>
   );

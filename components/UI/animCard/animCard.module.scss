@@ -60,7 +60,7 @@
   // background-image: url("https://ksomedia.s3.amazonaws.com/AXTDT/Web/AXTDT-Campaign-ResponsiveWeb-HBO-SharpObjects-AXTDT-541/tiles/images/tiles.png");
   // background-size: 400% 500%;
   // background-repeat: no-repeat;
-  border-radius: 24px;
+  border-radius: 4px;
   z-index: 2;
   img {
       position: absolute;
@@ -97,7 +97,6 @@
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 3;
-  border-radius: 31px;
 }
 
 .tile:hover .back {
