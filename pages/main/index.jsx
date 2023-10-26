@@ -6,6 +6,7 @@ import AnimCard from "@/components/UI/animCard/animCard";
 import Intro from "@/components/Intro/Intro";
 import NewsCard from "@/components/UI/NewsCard/NewsCard";
 import Swipert from "@/components/UI/swiper/swipert";
+import CardService from "@/components/Card/Card";
 const Home = () => {
   const newsArray = [
     {
@@ -68,16 +69,28 @@ const Home = () => {
       </div>
       <div className={s.cards}>
         <div className={s.card}>
-          <AnimCard />
+          <CardService
+            name="Предварительная запись"
+            desc="Предварительная запись на встречу со специалистами"
+          />
         </div>
         <div className={s.card}>
-          <AnimCard />
+          <CardService
+            name="Предварительная запись"
+            desc="Предварительная запись на встречу со специалистами"
+          />
         </div>
         <div className={s.card}>
-          <AnimCard />
+          <CardService
+            name="Предварительная запись"
+            desc="Предварительная запись на встречу со специалистами"
+          />
         </div>
         <div className={s.card}>
-          <AnimCard />
+          <CardService
+            name="Предварительная запись"
+            desc="Предварительная запись на встречу со специалистами"
+          />
         </div>
       </div>
       <section className={s.news}>

@@ -17,7 +17,7 @@ export default function Swipert() {
               <h1>Услуги</h1>
               <div className={s.desc}>
                 <h1>Строительно-монтажные работы</h1>
-                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+                <p>Мы применяем только передовые технологии</p>
               </div>
               <div className={s.buttonPulse}>{buttonPulse()}</div>
             </div>
@@ -30,7 +30,7 @@ export default function Swipert() {
               <h1>Услуги</h1>
               <div className={s.desc}>
                 <h1>Строительно-монтажные работы</h1>
-                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+                <p>Мы применяем только передовые технологии</p>
               </div>
               <div className={s.buttonPulse}>{buttonPulse()}</div>
             </div>
@@ -43,7 +43,7 @@ export default function Swipert() {
               <h1>Услуги</h1>
               <div className={s.desc}>
                 <h1>Строительно-монтажные работы</h1>
-                <p>Мы применяем только блаблаблаблаблаблаблаблаблабалаблабал</p>
+                <p>Мы применяем только передовые технологии</p>
               </div>
               <div className={s.buttonPulse}>{buttonPulse()}</div>
             </div>

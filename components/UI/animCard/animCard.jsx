@@ -23,7 +23,7 @@ const AnimCard = ({ name, id, img }) => {
               of Wind Gap MO after a difficult childhood.
             </p>
             <div className={s.btn}>
-              <Link href="/">{buttonPulse()}Узнать</Link>
+              <Link href="/">{buttonPulse()}</Link>
             </div>
           </div>
         </div>

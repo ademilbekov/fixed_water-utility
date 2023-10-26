@@ -147,12 +147,12 @@
       height: auto;
     }
 
-    .home_bc {
-      padding: 100px 20px 0 20px !important;
-      .text_home {
-        margin-top: 0 !important;
-      }
-    }
+    // .home_bc {
+    //   padding: 100px 20px 0 20px !important;
+    //   .text_home {
+    //     margin-top: 0 !important;
+    //   }
+    // }
   }
 
   @media screen and (min-width: 1051px) and (max-width: 1440px) {
@@ -160,33 +160,35 @@
       height: auto;
     }
     .home_bc {
-      padding: 180px 20px 0 20px !important;
-      h2 {
-        font-size: 52px !important;
-      }
-      h1 {
-        font-size: 100px !important;
-      }
+      // padding: 180px 20px 0 20px !important;
+      // h2 {
+      //   font-size: 52px !important;
+      // }
+      // h1 {
+      //   font-size: 100px !important;
+      // }
 
-      .text_home {
-        margin-top: 0 !important;
-      }
+      // .text_home {
+      //   margin-top: 0 !important;
+      // }
     }
   }
 
-  @media screen and (min-width: 704px) and (max-width: 900px) {
+  @media screen and (max-width: 940px) {
     .home {
-      height: auto;
     }
     .home_bc {
-      padding: 110px 20px 0 20px !important;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 10%;
       h2 {
-        font-size: 62.5px !important;
-        line-height: 80px !important;
+        margin-top: 2.7vh;
+        font-size: 32.5px !important;
+        line-height: 35px !important;
       }
       h1 {
-        font-size: 100px !important;
-        line-height: 80px !important;
+        font-size: 32.5px !important;
+        line-height: 35px !important;
       }
       .text_home {
         margin-top: 0 !important;
@@ -194,77 +196,68 @@
     }
   }
 
-  @media screen and (max-width: 703px) {
+  @media screen and (max-width: 840px) {
     .home {
-      height: auto;
     }
     .home_bc {
-      padding: 90px 20px 0 20px !important;
-      .intro_last_title {
-        margin-top: 0 !important;
-      }
-      hr {
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
-      }
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 10%;
       h2 {
-        font-size: 62.5px !important;
-        line-height: 65px !important;
+        margin-top: 2.7vh;
+        font-size: 32.5px !important;
+        line-height: 35px !important;
       }
       h1 {
-        font-size: 100px !important;
-        line-height: 65px !important;
-        padding-top: 20px;
+        font-size: 32.5px !important;
+        line-height: 35px !important;
       }
       .text_home {
-        margin-top: 0;
+        margin-top: 0 !important;
       }
     }
   }
 
-  @media screen and (min-width: 600px) and (max-width: 639px) {
+  @media screen and (max-width: 710px) {
     .home {
-      .home_bc {
-        h2 {
-          font-size: 37.25px !important;
-          line-height: 40px !important;
-        }
-        h1 {
-          font-size: 60px !important;
-          line-height: 40px !important;
-          padding-top: 40px;
-        }
-        .text_home {
-          p {
-            font-size: 15px !important;
-            line-height: 15px;
-          }
+    }
+    .home_bc {
+      h2 {
+        font-size: 30px !important;
+        line-height: 28px !important;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px !important;
+        line-height: 40px !important;
+      }
+      .text_home {
+        p {
+          font-size: 15px !important;
+          line-height: 15px;
         }
       }
-    }
-    .intro_title {
-      height: 30px !important;
     }
   }
 
   @media screen and (min-width: 461px) and (max-width: 600px) {
-    .text_home {
-      display: none;
-    }
-    .intro_title {
-      height: 30px !important;
+    .home {
     }
     .home_bc {
-      padding: 90px 20px 0 20px !important;
-
       h2 {
-        font-size: 37.25px !important;
-        line-height: 40px !important;
+        font-size: 30px !important;
+        line-height: 28px !important;
+        margin-bottom: 20px;
       }
       h1 {
-        font-size: 60px !important;
+        font-size: 30px !important;
         line-height: 40px !important;
-        padding-top: 40px;
+      }
+      .text_home {
+        p {
+          font-size: 15px !important;
+          line-height: 15px;
+        }
       }
     }
   }
@@ -330,35 +323,36 @@
       padding: 90px 20px 0 20px !important;
 
       h2 {
+        margin-top: 10px;
         font-size: 25px !important;
         line-height: 55px !important;
       }
       h1 {
-        font-size: 35px !important;
+        font-size: 25px !important;
         padding-top: 0 !important;
-        line-height: 40px !important;
+        line-height: 30px !important;
       }
     }
   }
 
-  @media screen and (min-width: 0px) and (max-width: 360px) {
+  @media screen and (min-width: 0px) and (max-width: 440px) {
     .home {
       height: auto;
     }
     .intro_title {
       height: 40px !important;
       h2 {
-        font-size: 31.25px !important;
-        line-height: 40px !important;
+        margin-top: 22px;
+        font-size: 18.25px !important;
+        line-height: 16px !important;
       }
     }
 
     .home_bc {
-      padding: 70px 20px 0 20px !important;
-
+      padding-top: 30%;
       h1 {
-        font-size: 40px !important;
-        line-height: 40px !important;
+        font-size: 18.26px !important;
+        line-height: 22px !important;
       }
     }
   }

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import s from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,8 +7,12 @@ import facebook from "../../public/facebook.png";
 import inst from "../../public/pngwing.com.png";
 import user from "../../public/user.png";
 import logo from "../../public/logo.png";
+import { motion } from "framer-motion";
+import Sidebar from "../HeaderB/Sidebar/Sidebar";
 Link;
 const Header = () => {
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <header className={s.Header}>
       <div className={s.header_upper}>
@@ -20,8 +25,8 @@ const Header = () => {
           <button className={s.button_rus}>RUS</button>
         </div>
         <div className={s.sign_up}>
-          <Image className={s.user} src={user} alt="user"/>
-          <Link href="/login">личный кабинет</Link>
+          <Image className={s.user} src={user} alt="user" />
+          <Link href="/signUp">личный кабинет</Link>
         </div>
         <div className={s.info}>
           <div className={s.number}>
@@ -37,6 +42,24 @@ const Header = () => {
             <p className={s.number_of_number}>88-09-63</p>
           </div>
         </div>
+        <motion.div
+        className={s.burger}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, duration: 0.5 }}
+      >
+        <label htmlFor="check">
+          <input
+            type="checkbox"
+            id="check"
+            className={s.check}
+            onClick={() => setShowNav(!showNav)}
+          />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </motion.div>
       </div>
       <div className={s.header_links}>
         <div className={s.header_link_left}>
@@ -69,6 +92,7 @@ const Header = () => {
           Сайт мэрии
         </a>
       </div>
+      {showNav && <Sidebar show={showNav} setShowNav={setShowNav} />}
     </header>
   );
 };
