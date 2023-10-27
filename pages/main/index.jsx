@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import s from "./main.module.scss";
 import Image from "next/image";
-import AnimCard from "@/components/UI/animCard/animCard";
 import Intro from "@/components/Intro/Intro";
 import NewsCard from "@/components/UI/NewsCard/NewsCard";
 import Swipert from "@/components/UI/swiper/swipert";
