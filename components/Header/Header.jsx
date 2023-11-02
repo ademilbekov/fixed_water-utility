@@ -9,9 +9,32 @@ import user from "../../public/user.png";
 import logo from "../../public/logo.png";
 import { motion } from "framer-motion";
 import Sidebar from "../HeaderB/Sidebar/Sidebar";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, message, Space } from "antd";
+const onClick = ({ key }) => {
+  message.info(`Click on item ${key}`);
+};
 Link;
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
+
+  const items = [
+    {
+      label: "Физические лица",
+      key: "1",
+      link: "/chastnie",
+    },
+    {
+      label: "Юридические лица",
+      key: "2",
+      link: "/fiz",
+    },
+  ];
+
+
+  const onClick = ({ key }) => {
+    message.info(`Click on item ${key}`);
+  };
 
   return (
     <header className={s.Header}>
@@ -43,28 +66,30 @@ const Header = () => {
           </div>
         </div>
         <motion.div
-        className={s.burger}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, duration: 0.5 }}
-      >
-        <label htmlFor="check">
-          <input
-            type="checkbox"
-            id="check"
-            className={s.check}
-            onClick={() => setShowNav(!showNav)}
-          />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </motion.div>
+          className={s.burger}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, duration: 0.5 }}
+        >
+          <label htmlFor="check">
+            <input
+              type="checkbox"
+              id="check"
+              className={s.check}
+              onClick={() => setShowNav(!showNav)}
+            />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </motion.div>
       </div>
       <div className={s.header_links}>
         <div className={s.header_link_left}>
           <Link href="">Для абонентов</Link>
-          <Link href="">Услуги</Link>
+          <Link href="/Services">
+            Услуги
+          </Link>
           <Link href="">Новости</Link>
         </div>
         <div className={s.header_link_middle}>

@@ -44,6 +44,102 @@
   }
 }
 
+@media screen and (max-width:1440px){
+  .block {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  
+    .img {
+      z-index: 1;
+      height: 100%;
+      width: 70%;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2vh;
+      left: 52%;
+      top: 5%;
+      width: 45%;
+      height: 60%;
+      position: absolute;
+      z-index: 2;
+      height: auto;
+      h1 {
+        color: rgb(102, 136, 172);
+        font-size: 2rem;
+      }
+      .desc {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h1 {
+          font-size: 1.16rem;
+          color: rgb(0, 0, 0);
+        }
+        p {
+          font-size: 1.16rem;
+          color: rgb(0, 0, 0);
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:800px){
+  .block {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  
+    .img {
+      z-index: 1;
+      height: 100%;
+      width: 70%;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2vh;
+      left: 52%;
+      top: 5%;
+      width: 45%;
+      height: 60%;
+      position: absolute;
+      z-index: 2;
+      height: auto;
+      h1 {
+        color: rgb(102, 136, 172);
+        font-size: 2rem;
+      }
+      .desc {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        h1 {
+          font-size: 1.06rem;
+          color: rgb(0, 0, 0);
+        }
+        p {
+          font-size: 1rem;
+          color: rgb(0, 0, 0);
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   .block {
     position: relative;
@@ -61,7 +157,7 @@
     .text {
       display: flex;
       flex-direction: column;
-      gap: 1vh;
+      gap: 0.3vh;
       left: 52%;
       top: 5%;
       width: 45%;
@@ -71,19 +167,19 @@
       height: auto;
       h1 {
         color: rgb(102, 136, 172);
-        font-size: 18px;
+        font-size: 1rem;
       }
       .desc {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 2.3vh;
+        gap: 0.8rem;
         h1 {
-          font-size: 18px;
+          font-size: 1.1rem;
           color: rgb(0, 0, 0);
         }
         p {
-          font-size: 16px;
+          font-size: 0.92rem;
           color: rgb(0, 0, 0);
         }
       }

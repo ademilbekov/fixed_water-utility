@@ -30,7 +30,7 @@ const signUp = () => {
         </button>
         <div className={s.enter}>
           <p>Уже есть аккаунт?</p>
-          <a href="/login">Войти</a>
+          <a href="/signIn">Войти</a>
         </div>
       </div>
     </div>
