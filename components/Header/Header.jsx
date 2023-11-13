@@ -31,7 +31,6 @@ const Header = () => {
     },
   ];
 
-
   const onClick = ({ key }) => {
     message.info(`Click on item ${key}`);
   };
@@ -87,9 +86,17 @@ const Header = () => {
       <div className={s.header_links}>
         <div className={s.header_link_left}>
           <Link href="">Для абонентов</Link>
-          <Link href="/Services">
-            Услуги
-          </Link>
+          <li className={s.header_service}>
+            <Link href="/services">Услуги</Link>
+            <ul className={s.submenu}> 
+              <li className={s.submenu__item}>
+                <Link href="/private"className={s.submenu__link}>Частные лица</Link>
+              </li>
+              <li className={s.submenu__item}>
+                <Link href="/physical"className={s.submenu__link}>Юридические лица</Link>
+              </li>
+            </ul>
+          </li>
           <Link href="">Новости</Link>
         </div>
         <div className={s.header_link_middle}>

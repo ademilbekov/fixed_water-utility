@@ -187,6 +187,47 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    .header_service {
+      position: relative;
+      margin-right: 16px;
+      .submenu {
+        opacity: 0; /* Начальное значение прозрачности */
+        max-height: 0; /* Начальная высота 0, чтобы элемент был невидимым */
+        overflow: hidden; /* Скрывать контент, который не помещается внутри элемента */
+        z-index: 2;
+        position: absolute;
+        top: 100%;
+        left: 63%; /* Центрируем подменю */
+        transform: translateX(-50%);
+        width: 115px; /* Устанавливаем ширину подменю */
+        padding: 10px;
+        border-radius: 5px;
+        background: #fff;
+        -webkit-box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.16);
+        box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.16);
+        font-size: 10px;
+        transition: max-height 0.3s ease, opacity 0.3s ease; /* Плавное изменение высоты и прозрачности */
+        .submenu__item:not(:last-child) {
+          margin-bottom: 10px;
+          transition: 0.4s;
+          .submenu__item {
+            a {
+              transition: 0.4s;
+              &:hover {
+                color: rgb(102, 136, 172);
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .submenu {
+          opacity: 1; /* При наведении прозрачность становится 1, тем самым показывая элемент */
+          max-height: 220px; /* Изменяем высоту на нужное значение для плавного появления контента */
+        }
+      }
+    }
   }
   .header_link_middle {
     width: 35%;
