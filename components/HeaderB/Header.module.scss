@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .header {
-  font-family: "Bahnschrift", sans-serif !important;
   background: rgba(57, 56, 63, 1);
   height: 77px;
   width: 100%;
@@ -9,7 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  font-family: "Montserrat";
+
   z-index: 2000;
   @media (width <= 1213px) {
     padding: 0rem 2rem;

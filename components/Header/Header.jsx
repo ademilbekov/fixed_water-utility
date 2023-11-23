@@ -97,7 +97,7 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <Link href="">Новости</Link>
+          <Link href="/news">Новости</Link>
         </div>
         <div className={s.header_link_middle}>
           <Link href="/aboutus">О нас</Link>

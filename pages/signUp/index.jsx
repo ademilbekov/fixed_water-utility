@@ -5,6 +5,8 @@ import { Input } from "antd";
 import s from "./signUp.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import vodo_logo from '../../public/Vodo_Logo.png'
 const signUp = () => {
   return (
     <div className={s.signup}>
@@ -17,7 +19,8 @@ const signUp = () => {
         <div className={s.left_side}>
           <div className={s.backgr}></div>
           <div className={s.desc}>
-            <h1>Регистрация</h1>
+            <h1>Бишкек Водоканал</h1>
+            <Image className={s.vodo} src={vodo_logo}></Image>
           </div>
         </div>
         <div className={s.right_side}>
