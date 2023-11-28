@@ -1,4 +1,4 @@
-import React from "react";
+
 import s from "./news.module.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -29,7 +29,7 @@ const news = () => {
   return (
     <section className={s.news}>
       <div className={s.main_card}>
-        
+          <h2>sada</h2>
       </div>
       <div className={s.other_cards}>
         
